@@ -6,7 +6,6 @@
 <!-- saved from url=(0049)http://localhost/public_lasttask/gotaaruf/public/ -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Pencarian Cerpen</title>
-<link rel="icon" href="assets/logo.png" type="image/x-icon">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="assets/w3.css">
 <link rel="stylesheet" href="assets/css">
