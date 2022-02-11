@@ -18,11 +18,11 @@
 
       <center>
 
-      <a href="tambah_cerpen.php" class="w3-button w3-padding-large w3-red w3-margin-bottom">Scraping Web</a>
+      <a href="#" class="w3-button w3-padding-large w3-red w3-margin-bottom">Scraping Web</a>
 
       <br>
 
-      <a href="tambah_cerpen.php" class="w3-button w3-padding-large w3-yellow w3-margin-bottom">Simpan Data</a>
+      <a href="#" class="w3-button w3-padding-large w3-yellow w3-margin-bottom">Simpan Data</a>
 
       </center>
 
