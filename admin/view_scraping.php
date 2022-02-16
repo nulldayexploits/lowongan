@@ -18,12 +18,12 @@
 
       <center>
 
-      <a href="#" class="w3-button w3-padding-large w3-red w3-margin-bottom">Scraping Web</a>
+      <a href="http://127.0.0.1:8000/scrape" target="_blank" class="w3-button w3-padding-large w3-red w3-margin-bottom">Scraping Web</a>
 
       <br>
 
-      <a href="#" class="w3-button w3-padding-large w3-yellow w3-margin-bottom">Simpan Data</a>
-
+    <!--   <a href="#" class="w3-button w3-padding-large w3-yellow w3-margin-bottom">Simpan Data</a>
+ -->
       </center>
 
   </div>

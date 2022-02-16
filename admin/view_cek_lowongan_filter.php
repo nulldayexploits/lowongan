@@ -18,20 +18,21 @@
       <div class="w3-section">
         <select name="kategori" class="w3-input w3-border" >
           <option>- Pilih Kategori Pencarian -</option> 
-          <option value="kategori_lowongan">Kategori Lowongan</option> 
-          <option value="nama_pekerjaan">Nama Pekerjaan</option> 
-          <option value="nama_perusahaan">Nama Perusahaan</option> 
-          <option value="domisili">Domisili</option> 
-          <option value="gaji">Gaji</option> 
+          <option <?php if($_POST['kategori']=="kategori_lowongan"){echo'selected';} ?> value="kategori_lowongan">Kategori Lowongan</option> 
+          <option <?php if($_POST['kategori']=="nama_pekerjaan"){echo'selected';} ?> value="nama_pekerjaan">Nama Pekerjaan</option> 
+          <option <?php if($_POST['kategori']=="nama_perusahaan"){echo'selected';} ?> value="nama_perusahaan">Nama Perusahaan</option> 
+          <option <?php if($_POST['kategori']=="domisili"){echo'selected';} ?> value="domisili">Domisili</option> 
+          <option <?php if($_POST['kategori']=="gaji"){echo'selected';} ?> value="gaji">Gaji</option> 
         </select>
       </div>
 
       <div class="w3-section">
-        <input class="w3-input w3-border" type="input" name="q" placeholder="Masukkan Kata Kunci...">
+        <input class="w3-input w3-border" type="input" name="q" placeholder="Masukkan Kata Kunci..." value="<?php echo $_POST['q']; ?>">
       </div>
 
       <div class="w3-section">
         <button class="w3-button w3-red w3-margin-bottom" type="submit">Filter</button>
+        <a class="w3-button w3-blue w3-margin-bottom" href="view_cek_lowongan.php">Hilangkan Filter</a>
       </div>
 
       </form>
@@ -52,7 +53,7 @@
 
         <?php
           $no = 1;
-          $result = mysqli_query($mysqli, "SELECT * FROM tb_lowongan_pekerjaan");
+          $result = mysqli_query($mysqli, "SELECT * FROM tb_lowongan_pekerjaan WHERE $_POST[kategori] LIKE '%$_POST[q]%' ");
           while($data = mysqli_fetch_array($result)) { 
         ?>
         <tr>
