@@ -18,7 +18,8 @@
 
       <center>
 
-      <a href="http://127.0.0.1:8000/scrape" target="_blank" class="w3-button w3-padding-large w3-red w3-margin-bottom">Scraping Web</a>
+      <!-- <a href="http://127.0.0.1:8000/scrape" target="_blank" id="btn" class="w3-button w3-padding-large w3-red w3-margin-bottom">Scraping Web</a> -->
+      <a href="#" id="btn" class="w3-button w3-padding-large w3-red w3-margin-bottom">Scraping Web</a>
 
       <br>
 
@@ -36,6 +37,65 @@
 
 
 <br><br><br><br>
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+  <script type="text/javascript">
+    $('#btn').on('click', function(){ 
+
+      //var pp = 1;
+      var sumber1 = "loker_id"; 
+      var sumber2 = "jobstreet"; 
+
+
+      for (let pp = 1; pp <= 15; pp++) {
+        setTimeout(function() { get(pp); }, 100);
+      } 
+
+      function get(val){ 
+
+         $.ajax({ 
+           type: "GET", 
+           url: 'http://lokerid.mandikeofficial.my.id/?p='+val, 
+           success: function(data){
+             for(var i=0; i < data.length; i++){ 
+              simpan(data[i], sumber1);
+             }
+           } 
+         }); 
+
+         $.ajax({ 
+           type: "GET", 
+           url: 'http://jobstreet.mandikeofficial.my.id/?p='+val, 
+           success: function(data){ 
+             for(var i=0; i < data.length; i++){
+              simpan(data[i], sumber2);
+             }
+           } 
+         });
+
+      } 
+
+      function simpan(d,sumber){
+       
+       var kat = d.kategori_lowongan;
+       var pek = d.nama_pekerjaan;
+       var per = d.nama_perusahaan;
+       var gaj = d.gaji;
+       var dom = d.domisili;
+       var link = d.link_detail; 
+
+       $.ajax({ 
+         type: "GET", 
+         url: 'api.php?p1='+kat+'&p2='+pek+'&p3='+per+'&p4='+gaj+'&p5='+dom+'&p6='+link+'&sumber='+sumber, 
+         success: function(data){} 
+       }); 
+
+      }
+    
+    });
+
+  </script>
 
 <?php 
    
