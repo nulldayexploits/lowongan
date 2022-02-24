@@ -18,8 +18,7 @@
 
       <center>
 
-      <!-- <a href="http://127.0.0.1:8000/scrape" target="_blank" id="btn" class="w3-button w3-padding-large w3-red w3-margin-bottom">Scraping Web</a> -->
-      <a href="#" id="btn" class="w3-button w3-padding-large w3-red w3-margin-bottom">Scraping Web</a>
+      <a href="http://127.0.0.1:8000/scrape" target="_blank" id="btn" class="w3-button w3-padding-large w3-red w3-margin-bottom">Scraping Web</a>
 
       <br>
 
