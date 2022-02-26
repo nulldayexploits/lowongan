@@ -21,6 +21,7 @@
           <th>Nama Pekerjaan</th>
           <th>Perusahaan</th>
           <th>Domisili Pekerjaan</th>
+          <th>Gaji</th>
           <th>Sumber Scraping</th>
         </tr>
         
@@ -34,6 +35,7 @@
           <td><center><?php echo $no; ?></td>
           <td><center><?php echo $data['nama_pekerjaan']; ?></td>
           <td><center><?php echo $data['nama_perusahaan']; ?></td>
+          <td><center><?php echo $data['gaji']; ?></td>
           <td><center><?php echo $data['domisili']; ?></td>
           <td><center><?php echo $data['sumber_web']; ?></td>
         </tr>
