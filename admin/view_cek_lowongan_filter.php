@@ -61,8 +61,8 @@
           <td><center><?php echo $data['kategori_lowongan']; ?></td>
           <td><center><?php echo $data['nama_pekerjaan']; ?></td>
           <td><center><?php echo $data['nama_perusahaan']; ?></td>
-          <td><center><?php echo $data['gaji']; ?></td>
           <td><center><?php echo $data['domisili']; ?></td>
+          <td><center><?php echo $data['gaji']; ?></td>
           <td><center>
             <a href="<?php echo $data['link']; ?>" class="btn btn-danger waves-effect">Detail</a>
           </td>

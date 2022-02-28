@@ -41,7 +41,6 @@
       <table border=1 width="100%" style="border-collapse: collapse;">
         <tr class="w3-red">
           <th>No</th>
-          <th>Kategori</th>
           <th>Nama Pekerjaan</th>
           <th>Nama Perusahaan</th>
           <th>Domisili</th>
@@ -57,13 +56,13 @@
         ?>
         <tr>
           <td><center><?php echo $no; ?></td>
-          <td><center><?php echo $data['kategori_lowongan']; ?></td>
-          <td><center><?php echo $data['nama_pekerjaan']; ?></td>
+          <td><center><?php echo $data['nama_pekerjaan']; ?>
+          <br><b>Kategori: <?php echo $data['kategori_lowongan']; ?></b></td>
           <td><center><?php echo $data['nama_perusahaan']; ?></td>
-          <td><center><?php echo $data['gaji']; ?></td>
           <td><center><?php echo $data['domisili']; ?></td>
+          <td><center><?php echo $data['gaji']; ?></td>
           <td><center>
-            <a href="<?php echo $data['link']; ?>" class="btn btn-danger waves-effect">Detail</a>
+            <a href="<?php echo $data['link']; ?>" target="_blank" class="btn btn-danger waves-effect">Detail</a>
           </td>
         </tr>
         <?php $no++; } ?>

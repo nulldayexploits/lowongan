@@ -17,7 +17,7 @@ header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers
 
   
   $result = mysqli_query($mysqli, "INSERT INTO tb_lowongan_pekerjaan (id, sumber_web, kategori_lowongan, nama_pekerjaan, nama_perusahaan, logo_perusahaan, domisili, gaji, link) 
-                               VALUES(null, '$sumber', '$kategori_lowongan', '$nama_pekerjaan', '$nama_perusahaan', '-', '$gaji', '$domisili', '$link')") or die(mysqli_error($mysqli));
+                               VALUES(null, '$sumber', '$kategori_lowongan', '$nama_pekerjaan', '$nama_perusahaan', '-', '$domisili', '$gaji', '$link')") or die(mysqli_error($mysqli));
   
   if($result){ 
        

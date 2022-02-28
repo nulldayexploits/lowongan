@@ -35,8 +35,8 @@
           <td><center><?php echo $no; ?></td>
           <td><center><?php echo $data['nama_pekerjaan']; ?></td>
           <td><center><?php echo $data['nama_perusahaan']; ?></td>
-          <td><center><?php echo $data['gaji']; ?></td>
           <td><center><?php echo $data['domisili']; ?></td>
+          <td><center><?php echo $data['gaji']; ?></td>
           <td><center><?php echo $data['sumber_web']; ?></td>
         </tr>
         <?php $no++; } ?>
