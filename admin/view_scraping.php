@@ -45,11 +45,20 @@
       //var pp = 1;
       var sumber1 = "loker_id"; 
       var sumber2 = "jobstreet"; 
+      var sumber3 = "indeed"; 
+      var pp = 1;
+      (function loop() {
+        setTimeout(function () {
+          get(pp);
+          console.log("get("+pp+")");
+          loop();
+          pp++;
+        }, 5000); //5000 = 5000ms = 5s
+      }());
 
-
-      for (let pp = 1; pp <= 15; pp++) {
-        setTimeout(function() { get(pp); }, 100);
-      } 
+      // for (let pp = 1; pp <= 15; pp++) {
+      //   setTimeout(function() { get(pp); }, 100);
+      // } 
 
       function get(val){ 
 
@@ -69,6 +78,16 @@
            success: function(data){ 
              for(var i=0; i < data.length; i++){
               simpan(data[i], sumber2);
+             }
+           } 
+         });
+
+         $.ajax({ 
+           type: "GET", 
+           url: 'http://indeed.mandikeofficial.my.id/?p='+val, 
+           success: function(data){ 
+             for(var i=0; i < data.length; i++){
+              simpan(data[i], sumber3);
              }
            } 
          });
