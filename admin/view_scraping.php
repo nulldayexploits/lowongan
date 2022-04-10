@@ -3,6 +3,8 @@
   include('config/connect-db.php'); 
   include('template/atas.php'); 
 
+  $result = mysqli_query($mysqli, "SET GLOBAL event_scheduler = ON") or die(mysqli_error($mysqli));
+    
 ?>
   
    
